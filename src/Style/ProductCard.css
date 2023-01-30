@@ -1,0 +1,28 @@
+.product_item {
+    cursor: pointer;
+}
+
+.product_info h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.product_info span {
+    font-size: 0.9rem;
+}
+
+.product_card-btn .price {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.product_card-btn span i {
+    font-size: 1.2rem;
+    background: var(--primary-color);
+    padding: 5px;
+    color: #fff;
+    border-radius: 50%;
+}

@@ -1,0 +1,45 @@
+import React from 'react';
+import { Col } from 'reactstrap';
+import '../../Style/ProductCard.css';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { cartAction } from '../../redux/slices/cartSlice';
+import { toast } from 'react-toastify';
+
+ 
+const ProductCard = ({ item }) => {
+
+    const dispatch = useDispatch();
+    const addToCart = () => {
+        dispatch(cartAction.addItem({
+            id: item.id,
+            productName: item.productName,
+            price: item.price,
+            image: item.imgUrl
+        }))
+        toast.success("Product Added Successful")
+    }
+
+    return (
+        <Col lg='3' md='4' className='mb-4'>
+            <div className="product_item">
+                <div className="product_img">
+                    <motion.img whileHover={{ scale: 0.9 }} src={item.imgUrl} alt="" />
+                </div>
+                <div className="p-2 product_info">
+                    <h3 className="product_name">
+                        <Link to={`/shop/${item.id}`}>{item.productName}</Link>
+                    </h3>
+                    <span>{item.category}</span>
+                </div>
+                <div className="product_card-btn px-2 d-flex aling-items-center justify-content-between ">
+                    <span className="price"> $ {item.price} </span>
+                    <motion.span whileTap={{ scale: 1.5 }} onClick={addToCart} ><i class="ri-add-line"></i></motion.span>
+                </div>
+            </div>
+        </Col>
+    );
+};
+
+export default ProductCard;

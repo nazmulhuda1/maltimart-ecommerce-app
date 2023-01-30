@@ -1,0 +1,24 @@
+.common_section {
+    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.397)), url('../assets/images/table.jpg') no-repeat center center;
+    background-size: cover;
+    object-fit: cover;
+    padding: 100px 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.common_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.common_section h3 {
+    color: #fff;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    text-align: center;
+}

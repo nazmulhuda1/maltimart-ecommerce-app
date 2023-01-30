@@ -1,0 +1,40 @@
+.filter_wiged select {
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    color: #fff;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+.filter_wiged select:focus {
+    outline: none !important;
+}
+
+.filter_wiged select option {
+    font-size: 0.9rem;
+    padding: 20px 0 !important;
+    cursor: pointer !important;
+}
+
+.search-box {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+}
+
+.search-box span i {
+    columns: var(--primary-color);
+}
